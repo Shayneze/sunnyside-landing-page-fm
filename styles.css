@@ -101,18 +101,38 @@ p {
   background-color: rgba(254, 120, 103, 0.3); /* Couleur jaune avec transparence */
 }
 
-#cherry-background-img {
-  background-image: url(./images/desktop/image-graphic-design.jpg);
+.background-img {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-
-#orange-background-img {
-  background-image: url(./images/desktop/image-photography.jpg);
+.background-img img {
+  width: 100%;
 }
 
 .center-bottom-content {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 0 12vw 3vh;
+}
+.center-bottom-content p {
+  letter-spacing: -1px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+#graphic-design {
+  color: hsl(167, 40%, 24%);
+}
+
+#photography {
+  color: hsl(198, 62%, 26%);
 }
 
 .attribution {
