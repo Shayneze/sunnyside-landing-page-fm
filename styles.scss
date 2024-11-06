@@ -153,6 +153,51 @@ p {
   color: $dark-blue;
 }
 
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    margin-top: 5em;
+    color: $grayish-blue;
+    letter-spacing: 0.3em;
+    font-size: 1.3em;
+  }
+}
+
+.reviews-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  img {
+    border-radius: 50%;
+    width: 70px;
+  }
+  p {
+    text-align: center;
+    padding: 3em 0;
+    line-height: 1.7;
+    color: $very-dark-grayish-blue;
+    font-weight: 500;
+  }
+  .job-title {
+    padding: 0;
+    margin: 0;
+    color: $grayish-blue;
+    font-size: 13px;
+  }
+  h3 {
+    margin: 0 0 0.5em;
+    color: $desaturated-blue;
+  }
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
