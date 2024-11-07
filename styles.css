@@ -181,13 +181,56 @@ p {
   color: hsl(212, 27%, 19%);
 }
 
+.images {
+  display: flex;
+}
+.images img {
+  width: 25%;
+}
+
+.footer {
+  background-color: rgba(69, 140, 126, 0.4);
+  color: hsl(168, 34%, 41%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4em;
+}
+
+.logo-footer {
+  fill: hsl(168, 34%, 41%);
+  padding-bottom: 0.5em;
+}
+
+.links-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3em;
+}
+.links-footer a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: hsl(168, 34%, 41%);
+  padding: 0 1.5em;
+}
+
+.social-links {
+  padding-bottom: 2em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-links svg {
+  padding: 0 1em;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-bottom: 0.5em;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(167, 40%, 24%);
 }
 
 /*# sourceMappingURL=styles.css.map */
