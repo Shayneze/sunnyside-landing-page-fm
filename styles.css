@@ -36,12 +36,12 @@ p {
   padding: 2em;
 }
 
-.nav-links {
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-links a {
+.nav-menu a {
   text-decoration: none;
   font-family: "Barlow", sans-serif;
   color: white;
@@ -56,6 +56,10 @@ p {
   font-weight: 900;
   padding: 1em 2em;
   border-radius: 40px;
+}
+
+.img-mobile {
+  display: none;
 }
 
 .flex {
@@ -231,6 +235,166 @@ p {
 
 .attribution a {
   color: hsl(167, 40%, 24%);
+}
+
+/* Icône hamburger, cachée sur les grands écrans, visible sur les petits */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: white;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+/* Menu pour naviguer sur mobile */
+.menubar {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  padding-top: 2em;
+  background: white;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+
+.menubar::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px; /* Ajuste la taille selon tes besoins */
+  height: 30px;
+  background-color: inherit; /* Ou une autre couleur */
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  z-index: 2; /* Place le triangle derrière le contenu, si nécessaire */
+}
+
+.active {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: hsl(210, 4%, 67%);
+  font-family: "Barlow", sans-serif;
+}
+
+.btn-yellow {
+  background-color: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%) !important;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif !important;
+  font-weight: 600;
+  padding: 1em 2em;
+  border-radius: 40px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  /* Afficher l'icône hamburger sur mobile */
+  .hamburger {
+    display: block;
+  }
+  /* Masquer la navbar */
+  .nav-menu {
+    display: none;
+  }
+  /* Menu déroulant lorsqu'on clique sur l'icône hamburger */
+  .navbar.active .nav-menu {
+    display: flex;
+  }
+  .flex {
+    display: block;
+    text-align: center;
+  }
+  .flex img {
+    width: 100%;
+  }
+  .flex .section-content {
+    width: 100%;
+    padding: 1em 0 2em;
+  }
+  .flex .section-content p {
+    line-height: 1.5;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .img-desktop {
+    display: none;
+  }
+  .background-img {
+    width: 100%;
+  }
+  .center-bottom-content {
+    bottom: 40px;
+    padding: 0 1em;
+  }
+  .center-bottom-content h2 {
+    font-size: 2em;
+  }
+  .center-bottom-content p {
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+  }
+  .testimonials h2 {
+    font-size: 1em;
+  }
+  .reviews-section {
+    display: block;
+    padding: 0;
+  }
+  .review p {
+    padding: 1em 0;
+  }
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .images img {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
