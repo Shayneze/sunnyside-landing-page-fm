@@ -280,8 +280,6 @@ p {
   display: none;
   position: absolute;
   top: 10vh;
-  display: flex;
-  justify-content: center;
   width: 85%;
   padding-top: 2em;
   background: white;
@@ -341,8 +339,9 @@ p {
     display: none;
   }
   /* Menu déroulant lorsqu'on clique sur l'icône hamburger */
-  .navbar.active .nav-menu {
+  .menubar.active {
     display: flex;
+    justify-content: center;
   }
   .flex {
     display: block;
